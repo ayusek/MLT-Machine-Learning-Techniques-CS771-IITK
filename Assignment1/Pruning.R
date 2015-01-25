@@ -1,7 +1,10 @@
 library("party")
 library("rpart")
+library("caret")
+
+setwd('/Users/ayusek/Desktop/Academics/MLT/MLT-Machine-Learning-Techniques-CS771-IITK/Assignment1') #Need to be changed accordingly 
+
 source("config.R")
-source("missing_attributes.R")
 
 rows = length(mydata[[1]])
 flds <- createFolds(1:rows, k = 5, list = TRUE, returnTrain = FALSE)
@@ -9,7 +12,7 @@ flds <- createFolds(1:rows, k = 5, list = TRUE, returnTrain = FALSE)
 #print(paste("{\bf","Data" ,"}", "&" ,"{\bf",  "accuracy","}" ,"&" ,"{\bf",  "precision" ,"}", "&","{\bf", "recall" ,"}","&" ,"{\bf", "TP Rate" ,"}","&", "{\bf","FP Rate" ,"}","&", "{\bf","F1 Score","}"))
 
 cp_list = seq(0 , 0.025 , 0.001)
-average_accuracy = numeric(length(cv_list))
+average_accuracy = numeric(length(cp_list))
 
 #for (j in 1:length(cv_list)){
  #   accuracy = 0
@@ -28,7 +31,7 @@ for (i in 1:5){
     
     source("compute.R") #Added computations to another file to avaoid confusion 
 }
-    average_accuracy[j] <- accuracy/5
+    #average_accuracy[j] <- accuracy/5
 #}
 
 

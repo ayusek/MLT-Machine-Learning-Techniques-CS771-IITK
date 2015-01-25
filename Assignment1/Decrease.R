@@ -1,7 +1,10 @@
 library("party")
 library("rpart")
+library("caret")
+
+setwd('/Users/ayusek/Desktop/Academics/MLT/MLT-Machine-Learning-Techniques-CS771-IITK/Assignment1') #Need to be changed accordingly 
+
 source("config.R")
-source("missing_attributes.R")
 
 rows = length(mydata[[1]])
 flds <- createFolds(1:rows, k = 5, list = TRUE, returnTrain = FALSE)

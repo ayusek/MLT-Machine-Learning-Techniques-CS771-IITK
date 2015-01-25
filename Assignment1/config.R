@@ -1,4 +1,4 @@
-setwd('/Users/ayusek/Desktop/Academics/MLT/Assignment1') #Need to be changed accordingly 
+setwd('/Users/ayusek/Desktop/Academics/MLT/MLT-Machine-Learning-Techniques-CS771-IITK/Assignment1') #Need to be changed accordingly 
 
 set.seed(2) #Setting a seed for deterministic evaluation
 
@@ -7,8 +7,8 @@ mydata = read.csv("pima-indians-diabetes.data.txt",header = FALSE)
 colnames(mydata) = c("Num_Preg","PGC","BP","Tricept_Thickness","Insulin","BMI","DPF","Age","Label")
 
 #Decision Tree Parameters
-#Impurity_Function = "gini"
-Impurity_Function = "information"
+Impurity_Function = "gini"
+#Impurity_Function = "information"
 
 #Missing_Attribute_Train = "UseNA"
 Missing_Attribute_Train = "UseMean"
