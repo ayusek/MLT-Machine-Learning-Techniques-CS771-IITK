@@ -1,0 +1,16 @@
+MLT - Assignment 4 Report
+Name - Ayush Sekhari
+Roll No - 12185
+
+I used e1071 library to build up the SVM model and used auto-tuning with various ranges to get a reasonably optimal result. 
+The code is in que3.R. 
+
+best parameters:
+gamma cost epsilon
+0.028    4    0.06
+
+best performance: 
+Error Rate : 0.0561504 (5-FOLD CV error rate) 
+Accuracy : 94.38%
+
+The corresponding accuracy measures for various parameter settings are stored in files model1.txt, model2.txt, model3.txt, model4.txt for various parameter range grid searches. 

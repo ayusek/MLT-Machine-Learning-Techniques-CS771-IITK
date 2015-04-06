@@ -7,11 +7,11 @@ mydata = read.csv("pima-indians-diabetes.data.txt",header = FALSE)
 colnames(mydata) = c("Num_Preg","PGC","BP","Tricept_Thickness","Insulin","BMI","DPF","Age","Label")
 
 #Decision Tree Parameters
-Impurity_Function = "gini"
-#Impurity_Function = "information"
+#Impurity_Function = "gini"
+Impurity_Function = "information"
 
-#Missing_Attribute_Train = "UseNA"
-Missing_Attribute_Train = "UseMean"
+Missing_Attribute_Train = "UseNA"
+#Missing_Attribute_Train = "UseMean"
 
 Missing_Attribute_Test = "UseNA"
 #Missing_Attribute_Test = "UseMean"
